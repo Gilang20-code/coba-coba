@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,500&display=swap");
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              sans: ["Nunito", "sans-serif"],
+            },
+          },
+        },
+        plugins: [require("flowbite/plugin")],
+        content: ["./node_modules/flowbite/**/*.js"],
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid gap-4 grid-cols-2 ml-10">
+        <div class="content-left mx-auto mt-24">
+          <h2 class="font-semibold text-6xl mb-10 leading-snug">
+            User research<br />
+            made easy <br />
+            and fun.
+          </h2>
+          <h4 class="text-3xl font-medium mb-10">Start testing in minutes !</h4>
+          <p class="text-2xl font-normal mb-10">
+            Already have an account?
+            <a href="#" class="text-blue-600">Log in</a>
+          </p>
+          <div class="flex">
+            <div class="flex-initial w-10 mr-3 text-center">
+              <span><i class="fa-2x fa-brands fa-instagram"></i></span>
+            </div>
+            <div class="flex-initial w-10 mr-3 text-center">
+              <span><i class="fa-2x fa-brands fa-twitter"></i></span>
+            </div>
+            <div class="flex-initial w-10 mr-3 text-center">
+              <span><i class="fa-2x fa-brands fa-google"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="content-right mt-24 mr-20">
+          <div class="grid grid-cols-1 mb-10">
+            <button
+              type="button"
+              class="text-black border-zinc-950 border-solid border-x border-y focus:ring-4 focus:outline-1 font-medium rounded-sm text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 min-w-full justify-center"
+            >
+              <div class="mr-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="2em"
+                  viewBox="0 0 488 512"
+                >
+                  <path
+                    d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                  />
+                </svg>
+              </div>
+              <span class="text-3xl">Sign up with Google</span>
+            </button>
+          </div>
+          <div class="flex mb-10">
+            <div class="flex-initial w-96">
+              <hr class="border-black border-y-2" />
+            </div>
+            <div class="flex-initial w-32 flex justify-center">
+              <p class="align-top">or</p>
+            </div>
+            <div class="flex-initial w-96">
+              <hr class="border-black border-y-2" />
+            </div>
+          </div>
+          <form>
+            <div class="grid grid-cols-2 gap-10">
+              <div class="mb-10">
+                <label
+                  for="first-name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="first-name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+                <div class="validated-first text-xs mt-1 text-red-600"></div>
+              </div>
+              <div class="mb-10">
+                <label
+                  for="Last Name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="last-name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+                <div class="validated-last text-xs mt-1 text-red-600"></div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1">
+              <div class="mb-10">
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+                <div class="validated-email text-xs mt-1 text-red-600"></div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1">
+              <div class="mb-6">
+                <label
+                  for="password"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+                <div class="validated-pass text-xs mt-1 text-red-600"></div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 mb-5">
+              <div class="flex items-center mb-4">
+                <input
+                  id="default-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="default-checkbox"
+                  class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >I agree to the <span class="text-blue-600">Terms of Service</span> and <span class="text-blue-600">Privacy Notice</span></label
+                >
+              </div>
+            </div>
+            <div class="grid-col-1">
+              <button type="button" id="save" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900 min-w-full">Sign Me Up !</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script>
+      let buttonSave = document.getElementById('save');
+      buttonSave.addEventListener('click', function(){
+        let first = document.querySelector('#first-name').value;
+        let last = document.querySelector('#last-name').value;
+        let email = document.querySelector('#email').value;
+        let password = document.querySelector('#password').value;
+        let validatedFirst = document.querySelector('.validated-first');
+        let validatedLast = document.querySelector('.validated-last');
+        let validatedEmail = document.querySelector('.validated-email');
+        let validatedPass = document.querySelector('.validated-pass');
+        
+        let regex = new RegExp('[a-z0-9]+@gmail+\.[a-z]{2,3}');
+
+        if(first == ""){
+          validatedFirst.innerHTML = "Data First Name  Tidak Boleh Kosong";
+        }else if(first.length > 50){
+          validatedFirst.innerHTML = "Data First Name Tidak Boleh Melebihi 50 Karakter";
+        }else{
+          validatedFirst.innerHTML = "";
+        }
+        if(last == ""){
+          validatedLast.innerHTML = "Data Last Name Tidak Boleh Kosong";
+        }else if(last.length > 50){
+          validatedLast.innerHTML = "Data Last Name Tidak Boleh Melebihi 50 Karakter";
+        }else{
+          validatedLast.innerHTML = "";
+        }
+        if(email == ""){
+          validatedEmail.innerHTML = "Data Email Tidak Boleh Kosong";
+        }else if(regex.test(email) == false){
+          validatedEmail.innerHTML = "Data Email Tidak Valid";
+        }else{
+          validatedEmail.innerHTML = "";
+        }
+        if(password == ""){
+          validatedPass.innerHTML = "Data Password Tidak Boleh Kosong";
+        }else if(password.length < 8){
+          validatedPass.innerHTML = "Data Password Tidak Boleh Kurang Dari 8 Karakter";
+        }else if(password.length > 50){
+          validatedPass.innerHTML = "Data Password Tidak Boleh Melebihi Dari 50 Karakter";
+        }else{
+          validatedPass.innerHTML = "";
+        }
+
+
+
+      });
+    </script>
+  </body>
+</html>
